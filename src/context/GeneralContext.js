@@ -18,7 +18,7 @@ const GeneralProvider = (props) => {
     const [recipes,setRecipes] = useState([])
     const getMealPlan = async()=>{
         const main = 'https://api.spoonacular.com/mealplanner/generate?'
-        const apiKey = 'apiKey=cb9a60f452ab42a4a106b7cbe30eddce'
+        const apiKey = 'apiKey='
         const caloriesSearch = `&targetCalories=${calories}`
         const url = `${main}${apiKey}${caloriesSearch}`
         //const mockurl = 'https://eb318ab7-bbdf-49e5-9045-da7fd1e13d92.mock.pstmn.io/mockRecipe'
@@ -27,7 +27,7 @@ const GeneralProvider = (props) => {
         //console.log(response.data.week.monday.meals)
     }  
     const getRecipe = async()=>{
-        const main = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=cb9a60f452ab42a4a106b7cbe30eddce&addRecipeInformation=true'
+        const main = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=&addRecipeInformation=true'
         const query = queryRecipe.length > 0 ? `&query=${queryRecipe}`:''
         const type = typeRecipe.length > 0 ? `&type=${typeRecipe}` : ''
         const diet = dietRecipe.length > 0 ? `&diet=${dietRecipe}` : ''
